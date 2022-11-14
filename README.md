@@ -9,7 +9,7 @@ $('.peekaboo').peekaboo({
     expander: '<li class="pab-expand"></li>',  
     open: 'show more',      
     close: 'show less',   
-    size: 5,                
+    size: 2,                
 });
 ```
 
@@ -17,9 +17,10 @@ And then, we also have to reference it in the HTML.
 
 ```html
 <ul class="peekaboo">
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>I'm here</li>
+  <li>I'm here too</li>
+  <li>I'm hidden</li>
+  <li>I'm hidden too</li>
   <li class="pab-expand">show more</li>
 </ul>
 ```
