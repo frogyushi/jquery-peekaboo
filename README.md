@@ -17,10 +17,10 @@ And then, we also have to reference it in the HTML.
 
 ```html
 <ul class="peekaboo">
-  <li>I'm here</li>
-  <li>I'm here too</li>
-  <li>I'm hidden</li>
-  <li>I'm hidden too</li>
-  <li class="pab-expand">show more</li>
+    <li>I'm here</li>
+    <li>I'm here too</li>
+    <li>I'm hidden</li>
+    <li>I'm hidden too</li>
+    <li class="pab-expand">show more</li>
 </ul>
 ```
