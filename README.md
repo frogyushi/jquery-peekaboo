@@ -1,7 +1,9 @@
-# jquery-peekaboo
+# jQuery-peekaboo
 A simple lightweight jQuery library for collapsing/expanding HTML
 
-## Using in JavaScript
+## Usage
+
+First, we implement peekaboo in our JavaScript file using jQuery.
 ```js
 $('.peekaboo').peekaboo({
     expander: '<li class="pab-expand"></li>',  
@@ -11,7 +13,7 @@ $('.peekaboo').peekaboo({
 });
 ```
 
-## Example in HTML
+And then, we also have to reference it in the HTML.
 
 ```html
 <ul class="peekaboo">
