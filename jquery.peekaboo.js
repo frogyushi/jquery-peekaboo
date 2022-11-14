@@ -1,7 +1,7 @@
 /**
  * Peekaboo
  *
- * A simple lightweight jQuery library for collapsing/expanding HTML
+ * A simple lightweight jQuery plugin for collapsing/expanding HTML
  *
  * @author yushi
  * @license MIT-license
