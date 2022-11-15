@@ -1,7 +1,7 @@
 /**
- * Peekaboo
+ * peekaboo
  *
- * A simple lightweight jQuery plugin for collapsing/expanding HTML
+ * A simple easy-to-use jQuery plugin for collapsing/expanding html
  *
  * @author yushi
  * @license MIT-license
@@ -26,7 +26,7 @@ $ = jQuery.noConflict();
         /**
          * Peekaboo preset reapply
          */
-        this.data = $.extend({ $pab: this }, Peekaboo.default, options);
+        this.data = $.extend({ $pab: this, state: { active: false, }, }, Peekaboo.default, options);
 
         /**
          * Expander button & Translation support from PHP
@@ -48,8 +48,9 @@ $ = jQuery.noConflict();
             .html(this.data.state.active ? this.data.closeText : this.data.openText)
             .data('jquery.peekaboo.expander', this.data);
 
-        this.$parent.attr('peekaboo-active', this.data.state.active);
-
+        if (this.data.state.active) {
+            this.$parent.addClass(this.data.activeClass);
+        }
 
         // Start DOM
         this.build();
@@ -100,7 +101,13 @@ $ = jQuery.noConflict();
                 $(this).html($this.closeText);
             }
 
-            $this.$pab.$parent.attr('peekaboo-active', $this.state.active);
+            var parent = $this.$pab.$parent;
+
+            if (parent.hasClass($this.activeClass)) {
+                parent.removeClass($this.activeClass);
+            } else {
+                parent.addClass($this.activeClass);
+            }
         });
     };
 
@@ -110,15 +117,13 @@ $ = jQuery.noConflict();
      * @type {{expanderPlacement: string, windowSize: number, expanderElement: string, closeText: string, state: {active: boolean}, openText: string}}
      */
     Peekaboo.default = {
+        activeClass: 'active',
         expanderElement: '<div>',
         expanderPlacement: 'innerafter',
         expanderUnderflowHide: true,
         openText: 'open',
         closeText: 'close',
         windowSize: 10,
-        state: {
-            active: false,
-        },
     };
 
     Peekaboo.prototype.close = function () {
