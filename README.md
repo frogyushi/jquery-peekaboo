@@ -1,7 +1,10 @@
+> Note: this repo is relatively new and wip, there's lots of ideas ahead so stay tuned :)
+
 # peekaboo
+
 A simple easy-to-use jQuery plugin for collapsing/expanding html
 
-#### [jsfiddle demo](https://jsfiddle.net/4jsavz31/59/)
+###### Check out our [JSFiddle Demo](https://jsfiddle.net/4jsavz31/59/)
 
 ### Features
 
