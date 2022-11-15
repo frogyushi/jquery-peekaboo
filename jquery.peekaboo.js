@@ -9,62 +9,113 @@
 
 $ = jQuery.noConflict();
 
-$(function () {
+(function ($) {
 
     /**
      * Create new Peekaboo instance
      *
-     * @param { jQuery } element
+     * @param { jQuery | HTMLElement } element
      * @param { Peekaboo.default } options
      * @constructor
      */
     function Peekaboo(element, options) {
-        this.parent = element;
-        this.children = element.children();
+
+        this.$parent = $(element);
+        this.$children = this.$parent.children();
 
         /**
-         * Peekaboo preset
+         * Peekaboo preset reapply
          */
-        this.data = $.extend({ pab: this }, Peekaboo.default, options);
+        this.data = $.extend({ $pab: this }, Peekaboo.default, options);
 
         /**
-         * Expander button
+         * Expander button & Translation support from PHP
          */
-        this.expander = $(this.data.expander)
-            .html(this.data.state.active ? this.data.close : this.data.open)
+        if (this.$parent.data('peekaboo-open')) {
+            this.data.openText = this.$parent.data('peekaboo-open');
+        }
+
+        if (this.$parent.data('peekaboo-close')) {
+            this.data.closeText = this.$parent.data('peekaboo-close');
+        }
+
+        /**
+         * Create expander button
+         *
+         * @type { jQuery }
+         */
+        this.expander = $(this.data.expanderElement)
+            .html(this.data.state.active ? this.data.closeText : this.data.openText)
             .data('jquery.peekaboo.expander', this.data);
 
-        build();
+        this.$parent.attr('peekaboo-active', this.data.state.active);
+
+
+        // Start DOM
+        this.build();
     }
 
-    function build() {
-        this.parent.append(this.expander);
-        this.state.active ? this.open() : this.close();
+    Peekaboo.prototype.build = function () {
 
+        /**
+         * if windowSize is not overflowed then hide expander
+         */
+        if (
+            this.data.expanderUnderflowHide &&
+            this.$children.length <= this.data.windowSize
+        ) {
+            this.expander.hide();
+        }
+
+        /**
+         * Set placement of expander
+         */
+        switch (this.data.expanderPlacement) {
+            case 'innerafter':
+                this.$parent.append(this.expander);
+                break;
+            case 'outerafter':
+                this.expander.insertAfter(this.$parent);
+                break;
+        }
+
+        /**
+         * Open or close peekaboo
+         */
+        this.data.state.active ? this.open() : this.close();
+
+        /**
+         * Onclick event for expander
+         */
         this.expander.on('click.peekaboo', function () {
             var $this = $(this).data('jquery.peekaboo.expander');
 
             if ($this.state.active) {
-                $this.pab.close();
+                $this.$pab.close();
                 $this.state.active = false;
-                $(this).html($this.open);
+                $(this).html($this.openText);
             } else {
-                $this.pab.open();
+                $this.$pab.open();
                 $this.state.active = true;
-                $(this).html($this.close);
+                $(this).html($this.closeText);
             }
+
+            $this.$pab.$parent.attr('peekaboo-active', $this.state.active);
         });
-    }
+    };
 
     /**
-     * Peekaboo settings
+     * Peekaboo default preset
+     *
+     * @type {{expanderPlacement: string, windowSize: number, expanderElement: string, closeText: string, state: {active: boolean}, openText: string}}
      */
     Peekaboo.default = {
-        expander: '<div>',
-        open: 'open',
-        close: 'close',
-
-        size: 10,
+        expanderElement: '<div>',
+        expanderPlacement: 'innerafter',
+        expanderUnderflowHide: true,
+        openText: 'open',
+        closeText: 'close',
+        windowSize: 10,
         state: {
             active: false,
         },
@@ -74,21 +125,21 @@ $(function () {
         var data = this.data;
         var $this = this.expander;
 
-        this.children.each(function (index) {
-            if (data.size > index && $this !== $(this)) {
+        this.$children.each(function (index) {
+            if (index >= data.windowSize && $this !== $(this)) {
                 $(this).hide();
             }
         });
     };
 
     Peekaboo.prototype.open = function () {
-        this.children.each(function () {
+        this.$children.each(function () {
             $(this).show();
         });
     };
 
     /**
-     * create peekaboo
+     * Create a Peekaboo
      *
      * @param { Peekaboo.default } options
      */
@@ -104,4 +155,4 @@ $(function () {
 
     $.fn.peekaboo.Constructor = Peekaboo;
 
-});
+})($);
