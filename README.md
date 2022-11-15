@@ -1,13 +1,15 @@
 # peekaboo
 A simple easy-to-use jQuery plugin for collapsing/expanding html
 
+#### [jsfiddle demo](https://jsfiddle.net/4jsavz31/59/)
+
 ### Features
 
 - Customizability
-- Extensive yet easy-to-use
+- Easy-to-use
 - Not made to *just* collapse text elements
 
-### CDN
+### CDNs
 ###### Example using jsDelivr
 ```html
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/frogyushi/jquery-peekaboo@master/jquery.peekaboo.min.js"></script>
@@ -22,10 +24,10 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 | expanderUnderflowHide | boolean | true | Set `display: none;` on the expander button only when the amount of children is equal or less `=<` than 'windowSize' |
 | openText | string | 'open' | Set html for expander button on open |
 | closeText | string | 'close' | Set html for expander button on close |
-| windowSize | int | 10 | Window size references the amount of child elements to be shown on document load. Elements of which index is greater than 'windowSize' are hidden |                                                |
+| windowSize | int | 10 | Set the amount of child elements to be shown on document load. Child elements of which index is greater than 'windowSize' are hidden |                                                |
 
 ### Data Attribute Settings (Optional)
-###### Example on predefining 'openText' and 'closeText' using data attributes. Useful when trying to implement translations using PHP
+###### Example on predefining 'openText' and 'closeText' using data attributes
 ```html
 <ul class="peekaboo"
     data-peekaboo-open="<?php echo __('open', 'text-domain') ?>"
