@@ -4,7 +4,7 @@ A simple lightweight jQuery plugin for collapsing/expanding html
 ### Features
 
 - Customizability
-- Extensive yet plain and easy-to-use
+- Extensive yet easy-to-use
 - Not made to *just* collapse text elements
 
 ## Settings
