@@ -26,7 +26,7 @@ $ = jQuery.noConflict();
         /**
          * Peekaboo preset reapply
          */
-        this.data = $.extend({ $pab: this, state: { active: false, }, }, Peekaboo.default, options);
+        this.data = $.extend({ $pab: this, state: { active: false } }, Peekaboo.default, options);
 
         /**
          * Expander button & Translation support from PHP
@@ -62,7 +62,7 @@ $ = jQuery.noConflict();
          * if windowSize is not overflowed then hide expander
          */
         if (
-            this.data.preserveExpander &&
+            this.data.preserveExpander === false &&
             this.$children.length <= this.data.windowSize
         ) {
             this.expander.hide();
