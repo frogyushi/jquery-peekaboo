@@ -7,6 +7,15 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 - Extensive yet easy-to-use
 - Not made to *just* collapse text elements
 
+### CDN
+Start using peekaboo by importing CDN
+
+##### Example using jsDelivr
+```html
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/frogyushi/jquery-peekaboo@master/jquery.peekaboo.min.js"></script>
+```
+
+
 ## Settings
 | Option | Type | Default | Description |
 |---|---|---|---|
