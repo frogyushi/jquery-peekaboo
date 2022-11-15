@@ -16,6 +16,7 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 ## Settings
 | Option | Type | Default | Description |
 |---|---|---|---|
+| activeClass | string | 'active' | Define a class referencing open/close states of peekaboo. 'close' state removes the class associated with 'activeClass' from the parent element |
 | expanderElement | string | '\<div\>' | Set html for the expander button wrap |
 | expanderPlacement | string | 'innerafter' | Accepts 'innerafter' or 'outerafter'. Define the placement of the expander button in the html. 'innerafter' places the expander button inside of the parent whereas 'outerafter' places the element after the parent |
 | expanderUnderflowHide | boolean | true | Enable `display: none` on the expander button only when the amount of children is equal or less `=<` than 'windowSize' |
