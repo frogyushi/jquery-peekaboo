@@ -72,8 +72,14 @@ $ = jQuery.noConflict();
          * Set placement of expander
          */
         switch (this.data.expanderPlacement) {
+            case 'innerbefore':
+                this.$parent.prepend(this.expander);
+                break;
             case 'innerafter':
                 this.$parent.append(this.expander);
+                break;
+            case 'outerbefore':
+                this.expander.insertBefore(this.$parent);
                 break;
             case 'outerafter':
                 this.expander.insertAfter(this.$parent);
