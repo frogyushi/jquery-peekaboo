@@ -1,12 +1,6 @@
 # peekaboo
 
-A simple easy-to-use jQuery plugin for collapsing/expanding html
-
-- Extensive customizability
-- Flexible and easy-to-use
-- Not made to *just* collapse text elements
-
-[demo](https://jsfiddle.net/frogyushi/fap3u9bg/57/)
+A simple easy-to-use jQuery plugin for collapsing/expanding html 
 
 ### CDNs
 ###### Example using jsDelivr
@@ -17,13 +11,13 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 ## Settings
 | Option            | Type    | Default      | Description                                                                                                                                                                                                                            |
 |-------------------|---------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| activeClass       | string  | 'active'     | Define a class referencing open/close states of peekaboo. 'close' state removes the class associated with 'activeClass' from the parent element                                                                                        |
-| expanderElement   | string  | '\<div\>'    | Set html for the expander                                                                                                                                                                                                              |
-| expanderPlacement | string  | 'innerafter' | Accepts 'innerbefore', 'innerafter', 'outerbefore', and 'outerafter'. Define the placement of the expander inside the html |
-| preserveExpander  | boolean | false        | Disable expander hide when the amount of children is equal or less than 'windowSize'                                                                                                                                                   |
-| openText          | string  | 'open'       | Set html for expander on open                                                                                                                                                                                                          |
-| closeText         | string  | 'close'      | Set html for expander on close                                                                                                                                                                                                         |
-| windowSize        | int     | 10           | Set the amount of child elements to be shown on document load. Child elements of which index is greater than 'windowSize' are hidden                                                                                                   |                                                |
+| activeClass       | string  | `active`     | Define a class referencing open/close states of peekaboo. 'close' state removes the class associated with 'activeClass' from the parent element                                                                                        |
+| expanderElement   | string  | `<div>`    | Set html for the expander                                                                                                                                                                                                              |
+| expanderPlacement | string  | `innerafter` | Accepts `innerbefore`, `innerafter`, `outerbefore`, and `outerafter`. Define the placement of the expander inside the html |
+| preserveExpander  | boolean | `false`        | Disable expander hide when the amount of children is equal or less than `windowSize`                                                                                                                                                  |
+| openText          | string  | `open`       | Set html for expander on open                                                                                                                                                                                                          |
+| closeText         | string  | `close`      | Set html for expander on close                                                                                                                                                                                                         |
+| windowSize        | int     | `10`           | Set the amount of child elements to be shown on document load. Child elements of which index is greater than 'windowSize' are hidden                                                                                                   |                                                |
 
 ### Data Attribute Settings (Optional)
 ###### Example on predefining 'openText' and 'closeText' using data attributes
