@@ -24,7 +24,7 @@ Start using peekaboo by importing CDN
 | expanderUnderflowHide | boolean | true | Enable `display: none` on the expander button only when the amount of children is equal or less `=<` than 'windowSize' |
 | openText | string | 'open' | Set html for expander button on open |
 | closeText | string | 'close' | Set html for expander button on close |
-| windowSize | int | 10 | Window size references the amount of child elements to be shown on document load. Elements of which index is greater than 'windowSize' are hidden. |                                                |
+| windowSize | int | 10 | Window size references the amount of child elements to be shown on document load. Elements of which index is greater than 'windowSize' are hidden |                                                |
 
 ### Data Attribute Settings (Optional)
 ###### Example on predefining 'openText' and 'closeText' using data attributes. Useful when trying to implement translations using PHP
