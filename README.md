@@ -1,26 +1,12 @@
-# jQuery-peekaboo
-A simple lightweight jQuery library for collapsing/expanding HTML
+# peekaboo
+A simple yet extensive lightweight jQuery library for collapsing/expanding HTML.
 
-## Usage
-
-First, we implement peekaboo in our JavaScript file using jQuery.
-```js
-$('.peekaboo').peekaboo({
-    expander: '<li class="pab-expand"></li>',  
-    open: 'show more',      
-    close: 'show less',   
-    size: 2,                
-});
-```
-
-And then, we also have to reference it in the HTML.
-
-```html
-<ul class="peekaboo">
-    <li>I'm here</li>
-    <li>I'm here too</li>
-    <li>I'm hidden</li>
-    <li>I'm hidden too</li>
-    <li class="pab-expand">show more</li>
-</ul>
-```
+## Settings
+| Option                | Type    | Default      | Description                                                                                                                                                                                                          |
+|-----------------------|---------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| expanderElement       | string  | '\<div\>'      | Set html for the expander button wrap                                                                                                                                                                                |
+| expanderPlacement     | string  | 'innerafter' | Accepts 'innerafter' or 'outerafter'. Define the placement of expander button in the html. 'innerafter' places the expander button inside of the parent whereas 'outerafter' places the element after the parent |
+| expanderUnderflowHide | boolean | true         | Enable `display: none` on the expander button only when the amount of children is equal or less `=<` than the window size                                                                                                     |
+| openText              | string  | 'open'       | Set html for expander button on open                                                                                                                                                         |
+| closeText             | string  | 'close'      | Set html for expander button on close                                                                                                                                                  |
+| windowSize            | int     | 10           | Window size references the amount of child elements to be shown on document load. Elements of which index is greater than 'window size' are hidden.                                                                  |
