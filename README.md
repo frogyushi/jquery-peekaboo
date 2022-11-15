@@ -2,13 +2,11 @@
 
 A simple easy-to-use jQuery plugin for collapsing/expanding html
 
- [Demo](https://jsfiddle.net/frogyushi/fap3u9bg/57/)
-
-### Features
-
 - Extensive customizability
 - Flexible and easy-to-use
 - Not made to *just* collapse text elements
+
+[demo](https://jsfiddle.net/frogyushi/fap3u9bg/57/)
 
 ### CDNs
 ###### Example using jsDelivr
