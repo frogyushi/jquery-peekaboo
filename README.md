@@ -1,5 +1,5 @@
 # peekaboo
-A simple lightweight jQuery plugin for collapsing/expanding html
+A simple easy-to-use jQuery plugin for collapsing/expanding html
 
 ### Features
 
