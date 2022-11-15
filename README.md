@@ -4,7 +4,7 @@
 
 A simple easy-to-use jQuery plugin for collapsing/expanding html
 
-###### Check out our [JSFiddle Demo](https://jsfiddle.net/4jsavz31/59/)
+###### Check out our [JSFiddle Demo](https://jsfiddle.net/frogyushi/fap3u9bg/57/)
 
 ### Features
 
