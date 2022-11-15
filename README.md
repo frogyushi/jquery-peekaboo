@@ -6,8 +6,8 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 
 ### Features
 
-- Customizability
-- Easy-to-use
+- Extensive customizability
+- Flexible and easy-to-use
 - Not made to *just* collapse text elements
 
 ### CDNs
