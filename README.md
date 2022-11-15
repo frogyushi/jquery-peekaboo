@@ -10,7 +10,7 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 ### CDN
 Start using peekaboo by importing CDN
 
-##### Example using jsDelivr
+###### Example using jsDelivr
 ```html
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/frogyushi/jquery-peekaboo@master/jquery.peekaboo.min.js"></script>
 ```
