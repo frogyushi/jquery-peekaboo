@@ -17,7 +17,7 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 | Option | Type | Default | Description |
 |---|---|---|---|
 | expanderElement | string | '\<div\>' | Set html for the expander button wrap |
-| expanderPlacement | string | 'innerafter' | Accepts 'innerafter' or 'outerafter'. Define the placement of expander button in the html. 'innerafter' places the expander button inside of the parent whereas 'outerafter' places the element after the parent |
+| expanderPlacement | string | 'innerafter' | Accepts 'innerafter' or 'outerafter'. Define the placement of the expander button in the html. 'innerafter' places the expander button inside of the parent whereas 'outerafter' places the element after the parent |
 | expanderUnderflowHide | boolean | true | Enable `display: none` on the expander button only when the amount of children is equal or less `=<` than 'windowSize' |
 | openText | string | 'open' | Set html for expander button on open |
 | closeText | string | 'close' | Set html for expander button on close |
