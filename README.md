@@ -25,7 +25,7 @@ A simple lightweight jQuery plugin for collapsing/expanding html
     data-peekaboo-close="<?php echo __('close', 'text-domain') ?>">
 ```
 
-### Setup in jQuery
+### Setting it up in jQuery
 ```js
 $('.peekaboo').peekaboo({
     activeClass: 'active',
