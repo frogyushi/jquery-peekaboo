@@ -36,7 +36,7 @@ A simple easy-to-use jQuery plugin for collapsing/expanding html
 ```js
 $('.peekaboo').peekaboo({
     activeClass: 'active',
-    expanderElement: '<div class="peekaboo-expander">',
+    expanderElement: '<div>',
     expanderPlacement: 'innerafter',
     expanderUnderflowHide: true,
     openText: 'open',
