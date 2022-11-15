@@ -1,5 +1,3 @@
-> Note: this repo is relatively new and wip, there's lots of ideas ahead so stay tuned :)
-
 # peekaboo
 
 A simple easy-to-use jQuery plugin for collapsing/expanding html
