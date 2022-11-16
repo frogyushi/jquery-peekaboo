@@ -26,18 +26,23 @@ $ = jQuery.noConflict();
         /**
          * Peekaboo preset reapply
          */
-        this.data = $.extend({ $pab: this, state: { active: false } }, Peekaboo.default, options);
+        this.data = $.extend({ $pab: this, state: { open: false } }, Peekaboo.default, options);
 
         /**
          * Expander button & Translation support from PHP
          */
-        if (this.$parent.data('peekaboo-open')) {
-            this.data.openText = this.$parent.data('peekaboo-open');
+        if (this.$parent.data('pab-open-text')) {
+            this.data.openText = this.$parent.data('pab-open-text');
         }
 
-        if (this.$parent.data('peekaboo-close')) {
-            this.data.closeText = this.$parent.data('peekaboo-close');
+        if (this.$parent.data('pab-close-text')) {
+            this.data.closeText = this.$parent.data('pab-close-text');
         }
+
+        /**
+         * Adding parent class
+         */
+        this.$parent.addClass(this.data.parentClass);
 
         /**
          * Create expander button
@@ -45,12 +50,10 @@ $ = jQuery.noConflict();
          * @type { jQuery }
          */
         this.expander = $(this.data.expanderElement)
-            .html(this.data.state.active ? this.data.closeText : this.data.openText)
+            .html(this.data.state.open ? this.data.closeText : this.data.openText)
             .data('jquery.peekaboo.expander', this.data);
 
-        if (this.data.state.active) {
-            this.$parent.addClass(this.data.activeClass);
-        }
+        this.$parent.attr('pab-open', this.data.state.open);
 
         // Start DOM
         this.build();
@@ -89,7 +92,7 @@ $ = jQuery.noConflict();
         /**
          * Open or close peekaboo
          */
-        this.data.state.active ? this.open() : this.close();
+        this.data.state.open ? this.open() : this.close();
 
         /**
          * Onclick event for expander
@@ -97,33 +100,28 @@ $ = jQuery.noConflict();
         this.expander.on('click.peekaboo', function () {
             var $this = $(this).data('jquery.peekaboo.expander');
 
-            if ($this.state.active) {
+            if ($this.state.open) {
                 $this.$pab.close();
-                $this.state.active = false;
+                $this.state.open = false;
                 $(this).html($this.openText);
             } else {
                 $this.$pab.open();
-                $this.state.active = true;
+                $this.state.open = true;
                 $(this).html($this.closeText);
             }
 
-            var parent = $this.$pab.$parent;
-
-            if (parent.hasClass($this.activeClass)) {
-                parent.removeClass($this.activeClass);
-            } else {
-                parent.addClass($this.activeClass);
-            }
+            var $parent = $this.$pab.$parent;
+            $parent.attr('pab-open', $this.state.open);
         });
     };
 
     /**
      * Peekaboo default preset
      *
-     * @type {{expanderPlacement: string, windowSize: number, expanderElement: string, closeText: string, state: {active: boolean}, openText: string}}
+     * @type {{expanderPlacement: string, windowSize: number, expanderElement: string, closeText: string, parentClass: string, openText: string, enableAutoHide: boolean}}
      */
     Peekaboo.default = {
-        activeClass: 'active',
+        parentClass: 'pab',
         expanderElement: '<div>',
         expanderPlacement: 'innerafter',
         enableAutoHide: true,
