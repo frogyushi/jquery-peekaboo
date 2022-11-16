@@ -3,7 +3,7 @@
 A simple easy-to-use jQuery plugin for collapsing/expanding HTML.
 
 ## Getting started
-Using a CDN to import peekaboo:
+Place the import in your `<head>` tag to start working with peekaboo:
 ```html
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/frogyushi/jquery-peekaboo/jquery.peekaboo.min.js"></script>
 ```
@@ -12,7 +12,7 @@ Using a CDN to import peekaboo:
 Available options and their default values are shown here:
 | Option            | Type    | Default      | Description                                                                                                                                                                                                                            |
 |-------------------|---------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| activeClass       |**string**  | active     | Provide a class to be added to the parent element when opened                                                                            |
+| activeClass       |**string**  | active     | Set a class to be added to the parent element when opened. Auto-removes class from parent element when state is closed                                                                          |
 | expanderElement   | **string**  | \<div\>    | Set html for the expander                                                                                                                                                                                                              |
 | expanderPlacement | **string**  | innerafter | Accepts **innerbefore**, **innerafter**, **outerbefore**, and **outerafter**. Define expander's placement |
 | enableAutoHide  | **boolean** | false        | Disable expander's auto-hide when the amount of child elements is equal or less than **windowSize**                                                                                                                                                  |
@@ -29,7 +29,7 @@ Predefining **openText** and **closeText** options through data attributes:
 ```
 
 ## Usage
-Example of peekaboo set with default option values:
+Example of peekaboo using default option values:
 ```js
 $('.peekaboo').peekaboo({
     activeClass: 'active',
