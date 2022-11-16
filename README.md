@@ -12,7 +12,7 @@ Place the import in your `<head>` tag to start working with peekaboo:
 Available options and their default values are shown here:
 | Option            | Type    | Default      | Description                                                                                                                                                                                                                            |
 |-------------------|---------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| parentClass       |**string**     | active     | Set a class to be added to the parent element                                                                          |
+| parentClass       |**string**     | pab     | Set a class to be added to the parent element                                                                          |
 | expanderElement   | **string**  | \<div\>    | Set html for the expander                                                                                                                                                                                                              |
 | expanderPlacement | **string**  | innerafter | Accepts **innerbefore**, **innerafter**, **outerbefore**, and **outerafter**. Define expander's placement |
 | enableAutoHide    | **boolean** | true        | Enable expander's auto-hide when the amount of child elements is equal or less than **windowSize**                                                                                                                                                  |
