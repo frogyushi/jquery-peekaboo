@@ -15,7 +15,7 @@ Available options and their default values are shown here:
 | activeClass       |**string**  | active     | Set a class to be added to the parent element when opened. Auto-removes class from parent element when state is closed                                                                          |
 | expanderElement   | **string**  | \<div\>    | Set html for the expander                                                                                                                                                                                                              |
 | expanderPlacement | **string**  | innerafter | Accepts **innerbefore**, **innerafter**, **outerbefore**, and **outerafter**. Define expander's placement |
-| enableAutoHide  | **boolean** | false        | Disable expander's auto-hide when the amount of child elements is equal or less than **windowSize**                                                                                                                                                  |
+| enableAutoHide  | **boolean** | true        | Disable expander's auto-hide when the amount of child elements is equal or less than **windowSize**                                                                                                                                                  |
 | openText          | **string**  | open       | Set html for expander on open                                                                                                                                                                                                          |
 | closeText         | **string**  | close      | Set html for expander on close                                                                                                                                                                                                         |
 | windowSize        |**int**     | 10          | Set an amount of child elements to be displayed on document load. Child elements of which index is greater than **windowSize** are hidden                                                                                                   |                                                |
@@ -35,7 +35,7 @@ $('.peekaboo').peekaboo({
     activeClass: 'active',
     expanderElement: '<div>',
     expanderPlacement: 'innerafter',
-    enableAutoHide: false,
+    enableAutoHide: true,
     openText: 'open',
     closeText: 'close',
     windowSize: 10,
