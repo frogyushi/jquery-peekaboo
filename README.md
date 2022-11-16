@@ -3,9 +3,7 @@
 A simple easy-to-use jQuery plugin for collapsing/expanding HTML.
 
 ## Getting started
-You can either include peekaboo as `.js` script or as a CDN.
-
-###### Using a CDN to import peekaboo
+Using a CDN to import peekaboo:
 ```html
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/frogyushi/jquery-peekaboo/jquery.peekaboo.min.js"></script>
 ```
@@ -23,15 +21,15 @@ Available options and their default values are shown here:
 | windowSize        |**int**     | 10          | Set an amount of child elements to be displayed on document load. Child elements of which index is greater than **windowSize** are hidden                                                                                                   |                                                |
 
 ### Data Attribute Settings (Optional)
-###### Predefining **openText** and **closeText** options through data attributes
+Predefining **openText** and **closeText** options through data attributes:
 ```html
 <ul class="peekaboo"
     data-peekaboo-open="<?php echo __('open', 'text-domain') ?>"
     data-peekaboo-close="<?php echo __('close', 'text-domain') ?>">
 ```
 
-### Using peekaboo (jQuery)
-
+## Usage
+Example of peekaboo set with default option values:
 ```js
 $('.peekaboo').peekaboo({
     activeClass: 'active',
