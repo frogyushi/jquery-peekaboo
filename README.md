@@ -24,8 +24,8 @@ Available options and their default values are shown here:
 Predefining **openText** and **closeText** options through data attributes:
 ```html
 <ul class="peekaboo"
-    data-peekaboo-open="<?php echo __('open', 'text-domain') ?>"
-    data-peekaboo-close="<?php echo __('close', 'text-domain') ?>">
+    data-pab-open-text="<?php echo __('open', 'text-domain') ?>"
+    data-pab-close-text="<?php echo __('close', 'text-domain') ?>">
 ```
 
 ## Usage
