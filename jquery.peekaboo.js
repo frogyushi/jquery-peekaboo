@@ -62,7 +62,7 @@ $ = jQuery.noConflict();
          * if windowSize is not overflowed then hide expander
          */
         if (
-            this.data.preserveExpander === false &&
+            this.data.enableAutoHide &&
             this.$children.length <= this.data.windowSize
         ) {
             this.expander.hide();
@@ -126,7 +126,7 @@ $ = jQuery.noConflict();
         activeClass: 'active',
         expanderElement: '<div>',
         expanderPlacement: 'innerafter',
-        preserveExpander: false,
+        enableAutoHide: false,
         openText: 'open',
         closeText: 'close',
         windowSize: 10,
