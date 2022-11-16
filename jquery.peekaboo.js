@@ -126,7 +126,7 @@ $ = jQuery.noConflict();
         activeClass: 'active',
         expanderElement: '<div>',
         expanderPlacement: 'innerafter',
-        enableAutoHide: false,
+        enableAutoHide: true,
         openText: 'open',
         closeText: 'close',
         windowSize: 10,
